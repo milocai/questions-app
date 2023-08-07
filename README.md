@@ -1,44 +1,40 @@
-# Desafíos de entrevistas
-En este repositorio se iran subiendo algunos de los challenges que resolvemos en [el stream](https://twitch.tv/goncypozzo). La mayoría de los ejercicios están ya configurados para usar con JavaScript, TypeScript o React pero sientente libre de copiar la consigna y resolverlo con tus tecnologías preferidas.
+# Aplicación de preguntas anónimas
+Resolución challenge del [stream de goncy](https://www.twitch.tv/goncypozzo)
 
-## Índice
-* [Ejercicios de algorítmos](./ejercicios-algoritmos/): Similares a los que toman en entrevistas de live-coding, tanto para posiciones frontend como backend.
-    * [Sesión 1](./ejercicios-algoritmos/sesion-1/) - [STREAM](https://www.youtube.com/watch?v=W20aHH7F1q8)
-    * [Sesión 2](./ejercicios-algoritmos/sesion-2/) - [STREAM](https://youtu.be/Mu9kdqCna90)
-    * [Sesión 3](./ejercicios-algoritmos/sesion-3/) - [STREAM](https://www.youtube.com/watch?v=EdqCkmJsmi4)
-    * [Sesión 4](./ejercicios-algoritmos/sesion-4/) - [STREAM](https://youtu.be/LW681EfHZFc)
-* [Proyectos live](./proyectos-live): Similares a los que toman en entrevistas técnicas para posiciones de front-end, donde hay que resolver errors o implementar nuevas funcionalidades.
-    * [Búsqueda de productos](./proyectos-live/buscador-de-lista) - [STREAM](https://www.youtube.com/watch?v=SG5FFwLDuSQ)
-    * [Lista de supermercado](./proyectos-live/lista-supermercado) - [STREAM](https://www.youtube.com/watch?v=ocwsPB1ysOQ)
-    * [Wordle](./proyectos-live/wordle) - [STREAM](https://www.youtube.com/watch?v=xsZZc9PRqFM)
-    * [Tienda Pokemon](./proyectos-live/tienda-pokemon) - [STREAM](https://www.youtube.com/watch?v=FGiAy0GUrDI)
-    * [Lista de archivos + algoritmos (Dan Abramov)](./proyectos-live/dan-abramov) - [STREAM](https://www.youtube.com/watch?v=-w-P4u0x8ig)
-    * [Tienda con carrito](./proyectos-live/carrito-tienda)
-    * [Grilla simétrica](./proyectos-live/grilla-simetrica)
-* [Proyectos take-home](./proyectos-take-home): Similares a los que dan para resolver en casa durante procesos de entrevistas frontend.
-    * [Juego de adivinar el Pokemon](./proyectos-take-home/adivinar-pokemon)
-    * [Juego de reflejos](./proyectos-take-home/juego-de-reflejos)
-    * [Ta-Te-Ti](./proyectos-take-home/ta-te-ti)
-    * [Cuando es el próximo feriado?](./proyectos-take-home/proximo-feriado)
-    * [Juego de colores](./proyectos-take-home/juego-de-colores)
-    * [Aplicación de preguntas anónimas](./proyectos-take-home/preguntas-anonimas)
-* Challenges reales de empresas: Estos challenges fueron hechos en conjunto con las empresas para evaluar candidatos en posiciones abiertas.
-    * [Basement](https://github.com/goncy/basement-challenge) - [WEB](https://basement.studio/)
-    * [Aerolab](https://github.com/goncy/aerolab-challenge) - [WEB](https://aerolab.co/)
-    * [Kopius](https://github.com/goncy/tradehelm-challenge) - [WEB](https://kopiustech.com/)
-    * [Cognizant Softvision](https://github.com/goncy/cognizant-softvision-challenge) - [WEB](https://www.cognizantsoftvision.com/)
-    * [Innovid](https://github.com/goncy/innovid-challenge) - [WEB](https://www.innovid.com/)
-    * [Realtrends](https://github.com/goncy/realtrends-challenge) - [WEB](https://www.real-trends.com/)
-    * [Blackbox Vision](https://github.com/goncy/blackbox-vision-challenge) - [WEB](https://blackbox-vision.tech/)
-    * [Coderio](https://github.com/goncy/coderio-challenge) - [WEB](https://coderio.co/)
-* Challenges progresivos: Realiza uno de estos ejercicios por día para ganar constancia mientras practicas.
-    * [Adviency, hagamos la misma aplicación por 24 días](https://twitter.com/goncy/status/1466050967808401409)
+![01](./assets/01.png)
 
-### Resolución de challenges y más
-Si te gustaría ver el contenido de manera más didáctica, muchos de los challenges están resueltos en [YouTube](https://youtube.goncy.dev) o en [Twitch](https://twitch.tv/goncypozzo).
+Este proyecto tiene 4 milestones o entregas, no es necesario que cumplas todas para dar el proyecto por terminado, ajustalo a tus necesidades y conocimientos. Cada entrega se vuelve un poco más difícil.
 
-### Necesitás apoyo?
-Si tenes dudas o queres apoyo, podés unirte al [discord](https://discord.goncy.dev) de la comunidad.
+Intentá que cada entrega tenga calidad de producto final, antes de continuar a la próxima entrega, refactorizá tu código, comentalo o lo que consideres que sea correcto previo a entregarlo a un cliente.
+
+## Entrega 1
+Nuestro equipo de diseño nos dijo que quería una aplicación con una interfáz similar a [NGL](https://ngl.link/) y nos dió como referencia la imágen de arriba. A diferencia de NGL, esta es una aplicación de preguntas anónimas donde todas las preguntas llegan al muro principal, no hay un administrador que las contesta, modera o elimina, sino que cualquier persona puede copiar esa pregunta y responderla en sus propias redes.
+
+El cliente nos dió esta aplicación con Next.js + App router y Tailwind CSS configurado, pero nos dijo que podemos usar las tecnologías que queramos para el proyecto. Los requerimientos son:
+
+- Debe haber un formulario en la parte superior para que los usuarios envien preguntas
+- Las preguntas nuevas deberían persistir al refrescar la página
+- Deberíamos ver las preguntas de otros usuarios además de las nuestras
+
+## Entrega 2
+Sumado a lo presentado en la entrega 1:
+
+- Deberíamos tener una ruta para cada pregunta que nos muestre solo su contenido y un botón para volver al inicio
+- Al compartir esta ruta en redes sociales, deberiamos mostrar una imágen de open-graph que incluya el texto de la pregunta
+- Deberíamos tener un botón en la ruta de cada pregunta que nos permita copiar una imágen de la pregunta al portapapeles
+
+## Entrega 3
+Sumado a lo presentado en la entrega 2:
+
+- Deberíamos tener una ruta `/admin` a la cual podemos acceder y nos permita borrar preguntas
+- Al estar en la ruta `/admin` y clickear una pregunta podemos contestarla y aparecerá la respuesta debajo de la pregunta
+
+## Entrega 4
+Sumado a lo presentado en la entrega 3:
+
+- Podemos acceder a diferentes "canales" y cada canal tiene sus propias preguntas. Por ej: entrar a `/politica` tiene unas preguntas y `/mascotas` tiene sus propias preguntas
+- Cada canal tiene su propia ruta de administración `/politica/admin` y `/mascotas/admin`
 
 ---
-Si te gusta mi contenido, seguime en [Twitter](https://twitter.gonzalopozzo.com), en [Twitch](https://twitch.gonzalopozzo.com), doname un [Cafecito](https://cafecito.gonzalopozzo.com) o volvete [sponsor en github](https://github.com/sponsors/goncy) ✨
+
+Podés clonarlo o usarlo directamentes desde [CodeSandbox](https://codesandbox.io/s/github/goncy/interview-challenges/tree/main/proyectos-take-home/preguntas-anonimas). Una vez que termines alguna de las entregas, compartilo en el canal #feedback del [Discord](https://discord.goncy.dev) para obtener feedback y etiquetame en [Twitter](https://twitter.gonzalopozzo.com) y [LinkedIn](https://linkedin.gonzalopozzo.com) cuando lo compartas así lo re-comparto y obtiene más visibilidad.
